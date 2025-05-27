@@ -35,7 +35,7 @@ This is a full-stack Student Management CRUD (Create, Read, Update, Delete) appl
 
 Make sure you have the following installed:
 
-- Java 17+
+- Java 21
 - Maven
 - MongoDB (local or cloud)
 - A modern web browser (for frontend)
