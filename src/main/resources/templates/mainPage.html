@@ -1,0 +1,874 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+gbody {
+    background: #A5A5A5;
+}
+.header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30PX 8%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a {
+    font-size: 18px;
+    color: #474747;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 10px;
+}
+.navbar a:hover {
+    color: #000000;
+}
+.globe-icon a i {
+    font-size: 20px;
+    color: #474747;
+    text-decoration: none;
+    margin-left: 70px;
+}
+.globe-icon a i:hover{
+    color: #000000;
+}
+.menu-bar a {
+    text-decoration: none;
+    color: #474747;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 15px;
+}
+.menu-bar a:hover{
+    color: #000000;
+}
+ button{
+    background: #0086D5;
+    border: #0086D5;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.home {
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 8% 0;
+}
+.home-contain h1{
+    font-size: 50px;
+    color: #303030;
+}
+.home-contain p{
+    font-size: 20px;
+    padding-top: 30px;
+    color: #303030;
+}
+.from {
+    padding-top: 30px;
+}
+.email {
+    width: 266px;
+    height: 38px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #A5A5A5;
+    border-radius: 5px;
+}
+.submit {
+    margin-left: 15px;
+    padding: 10px;
+    width: 128px;
+    height: 38px;
+    background: #0086D5;
+    border: 2px solid #0086D5;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s;
+}
+.submit:hover {
+    background: transparent;
+    color: #0086D5;
+}
+.home-img{
+    margin-right: -50px;
+}
+
+container-2 .client {
+    text-align: center;
+    margin: 100px;
+    color: #303030;
+}
+container-2 h1{
+    font-size: 40px;
+    
+}
+container-2 p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+container-2 img {
+    margin-top: 20px;
+    width: 860px;
+    height: 90px;
+}
+
+container-3 {
+    display: flex;
+    align-items: center;
+    padding: 60px 8% 0;
+}
+container-3 .our-top-features a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #0086D5;
+}
+.our-top-features h1 {
+    font-size: 40px;
+    color: #303030;
+    margin-top: 20px;
+}
+.our-top-features p{
+    font-size: 17px;
+    margin-top: 20px;
+    color: #303030;
+}
+.our-top-features button {
+    margin-top: 20px;
+}
+.Features-card{    
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    
+}
+.grid-box-1 {
+    border: 1px solid #303030;
+    padding: 20px;
+    border-radius: 20px;
+}
+.grid-box-1 img {
+    background: #FE3D3B;
+    padding: 5px;
+    
+    width: 45px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.Features-card p{
+    margin-top: 15px;
+}
+.grid-box-2 {
+    border: 1px solid #303030;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.grid-box-2 img {
+    background: #0086D5;
+    padding: 5px;
+    width: 45px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+}
+.grid-box-3 {
+    border: 1px solid #303030;
+    padding: 20px;
+    border-radius: 20px;
+}
+.grid-box-3 img {
+    background: #15D088;
+    padding: 5px;
+    width: 45px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.grid-box-4 {
+    border: 1px solid #303030;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.grid-box-4 img {
+    background: #FFB601;
+    padding: 5px;
+    width: 45px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.home-contain-2{
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 8% 0;
+}
+.performe-place a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #0086D5;
+    text-align: end;
+    display: block;
+
+}
+.performe-place h1 {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 30px;
+}
+.performe-place p{
+    text-align: right;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.performe-place-button{
+    display: flex;
+    justify-content: end;
+}
+.performe-place .btn-2 {
+    background: #0086D5;
+    border: 2px solid #0086D5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+   
+
+}
+
+.performe-place .btn-2:hover{
+    background: #fff;
+    color: #0086D5;
+}
+container-5 .home-contain-3 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 8% 0;
+}
+.home-boots a {
+    text-decoration: none;
+    color: #0086D5;
+    font-size: 15px;
+}
+.home-boots h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.home-boots p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.home-boots .btn-3 {
+    background: #0086D5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #0086D5;
+    color: #fff;
+}
+.home-boots .btn-3:hover {
+    background: #ffff;
+    color: #0086D5;
+}
+
+.clients-about {
+    text-align: center;
+}
+.about-us p {
+    font-size: 15px;
+    color: #0086D5;
+    margin-bottom: 25px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 50px;
+    
+}
+.client-box {
+    border: 2px solid #7070707D;
+    border-radius: 20px;
+}
+.clients-img img {
+    z-index: 1;
+    position: relative;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.client-box  p {
+    padding: 0px 15px 15px 15px;
+}
+.clients-img-1 img {
+    z-index: 1;
+    position: relative;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+}
+.dot div {
+    border: 2px solid #303030;
+    border-radius: 100px;
+    padding: 5px;
+}
+div .active{
+    background: #0086D5;
+}
+.dot div:hover {
+    background: #0086D5;
+}
+
+.FAQ {
+    text-align: center;
+    margin: 100px;
+}
+.FAQ p {
+    margin-bottom: 20px;
+    color: #0086D5;
+}
+.Questions {
+    padding: 0px 8% 0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    
+}
+.Questions span i{
+    margin-left: 35px;
+}
+.Questions-answer {
+    border: 2px solid #A5A5A5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 600px;
+    height: 140px;
+    margin-bottom: 20px;
+ 
+ 
+}
+.Questions-answer p {
+    font-size: 14px;
+    margin-top: 18px;
+}
+.Questions-answer h3 {
+    font-size: 20px;
+}
+
+.Questions-answer-2 {
+    border: 2px solid #A5A5A5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 600px;
+    margin-bottom: 20px;
+}
+.Questions-answer .Questions-answer-2 {
+    display: block;
+}
+.Questions-img {
+    width: 520px;
+    height: 680px;
+}
+
+.Subscribe-border {
+    background: #0086D5;
+    border-radius: 60px;
+    padding-top: 8px;
+    padding-bottom: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    color: #fff;
+}
+
+
+container-7 .Subscribe {
+    justify-content: center;
+    text-align: center;
+}
+.Subscribe p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.Subscribe h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.Subscribe .email-2 {
+    width: 345px;
+    height: 45px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #A5A5A5;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size: 15px;
+}
+.Subscribe a {
+   text-decoration: none;
+    color: #000000;
+   background: #ffff;
+   border-radius: 5px;
+   padding: 12px;
+}
+.Subscribe-border .rokat-img img{
+    margin-right: 200px;
+    width: 90px;
+   
+}
+.rokat-dot img {
+    margin-right: 505px;
+    margin-top: -285px;
+}
+
+
+.footer {
+    padding: 70px 0;
+}
+.footer-box {
+    max-width: 1170px;
+    margin: auto;
+}
+ul {
+    list-style: none;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-col p{
+    font-size: 17Px;
+    color: #474747;
+    margin-top: 20px;
+}
+ .footer-col .social-link a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #0086D5;
+   margin:  20px 10px 0;
+    text-align: center;
+   line-height: 40px;
+   border-radius: 50px;
+   color: #fff;
+    font-size: 25px;
+
+ }
+ .footer-col .social-link a:hover {
+    color: #A5A5A5;
+ }
+
+
+
+ .footer-col h3{
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #474747;
+ }
+ .footer-col ul li a{
+    line-height: 1.5;
+    text-decoration: none;
+    color: #303030;
+    transition: 0.2s;
+ }
+.footer-col ul li a:hover {
+    color: #000000;
+    padding-left: 2px;
+}
+#copy-right {
+    font-size: 15px;
+    color: #969696;
+    font-style: italic;
+    text-align: center;
+}
+
+
+ 
+
+.dot .dot-btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dot .dot-btn.active {
+  background: #007bff;
+}
+
+
+.home-img img {
+  max-width: 100%;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: scaleUpFadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+}
+.home-contain {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUpFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+ 
+
+  
+    </style>
+</head>
+<body>
+    <container>
+    <header class="header">
+        <a href="#" class="logo"><img src="https://i.ibb.co/cThMKNB/Group-361.png" alt="Logo"></a>
+        <nav class="navbar">
+            <a href="#">Features</a>
+            <a href="#">Modules</a>
+            <a href="#">Resources</a>
+            <a href="#">Institutions</a>
+            <a href="#">Pricing</a>
+        </nav>
+        <div class="globe-icon">
+            <a href="#"><i class='bx bx-globe'></i></a>
+        </div>
+        <div class="menu-bar">
+            <a href="#">Contact Us</a>
+            <a href="#">Login</a>
+            <a href="#" class="btn"><button>Get Started</button></a>
+        </div>
+    </header>
+
+    <section class="home">
+        <div class="home-contain">
+            <h1>Manage Students, Grades<br>Attendance & Reports<br>All in One Place</h1>
+            <p>Streamline your institution's workflow with an all-in-one student management system.</p>
+            <form class="from">
+                <input type="email" class="email" placeholder="Email">
+                <input type="submit" class="submit" value="Start Free Trial">
+            </form>
+        </div>
+        <div class="home-img">
+            <img src="https://i.ibb.co/gvKmw9m/Group-193.png" alt="Dashboard Preview">
+        </div>
+    </section>
+</container>
+
+<!--<container-2>
+    <div class="client">
+        <h1>Trusted by Leading Institutions</h1>
+        <p>Join thousands of schools and universities simplifying student records and administration.</p>
+        <img src="https://i.ibb.co/LJ2wmJ6/Image-5.png" alt="Clients Logos">
+    </div>
+</container-2>-->
+
+<container-3>
+    <div class="our-top-features">
+        <a href="#">Explore the Platform</a>
+        <h1>Top Features</h1>
+        <p>Our Student Management System is designed to handle every administrative task<br> from admissions to alumni management.</p>
+        <button>Get Started</button>
+    </div>
+
+    <div class="Features-card">
+        <div class="grid-box-1">
+            <img src="https://i.ibb.co/QfZ5R9q/Group-207.png">
+            <h1>Student Records</h1>
+            <p>Maintain comprehensive student profiles with enrollment details, performance history, and more.</p>
+        </div>
+
+        <div class="grid-box-2">
+            <img src="https://i.ibb.co/zxf53Dy/Group-226.png">
+            <h1>Attendance Tracking</h1>
+            <p>Monitor daily attendance and generate reports for both students and classes effortlessly.</p>
+        </div>
+
+        <div class="grid-box-3">
+            <img src="https://i.ibb.co/KsBnYGy/Group-239.png">
+            <h1>Online Admissions</h1>
+            <p>Digitize your admissions process with forms, document uploads, and automated review workflows.</p>
+        </div>
+
+        <div class="grid-box-4">
+            <img src="https://i.ibb.co/kyxdLK7/Group-246.png">
+            <h1>Parent Portal</h1>
+            <p>Enable guardians to track academic progress, attendance, fees, and communicate with staff in real time.</p>
+        </div>
+    </div>
+</container-3>
+
+<container-4>
+    <div class="home-contain-2">
+        <div class="home-img-2">
+            <img src="https://i.ibb.co/9rnpM74/Group-250.png" alt="Student Dashboard">
+        </div>
+
+        <div class="performe-place">
+            <a href="#">All-in-One Dashboard</a>
+            <h1>Track Academic Progress<br>in One Centralized Portal</h1>
+            <p>Access student data, communicate with teachers, and manage classes in a secure, user-friendly interface.</p>
+            <div class="performe-place-button">
+                <input type="button" class="btn-2" value="Get Started">
+            </div>
+        </div>
+    </div>
+</container-4>
+
+<container-5>
+  <div class="clients-about">
+    <div class="about-us">
+      <p>Testimonials</p>
+      <h1>What Our Institutions<br>Say About Us</h1>
+    </div>
+    <div class="box" id="testimonial-slider">
+      <div class="client-box active">
+        <div class="clients-img">
+          <img src="https://i.ibb.co/kSPrm8c/Group-310.png" alt="Client 1">
+        </div>
+        <h1>Principal, Greenfield School</h1>
+        <p>“StudentSync has transformed our administrative workflow. Easy to use and highly efficient.”</p>
+      </div>
+
+      <div class="client-box">
+        <div class="clients-img-1">
+          <img src="https://i.ibb.co/0Vt0Z68/Group-308.png" alt="Client 2">
+        </div>
+        <h1>Dean, Sunrise University</h1>
+        <p>“From admissions to reporting, this platform handles it all. Our staff and parents love it.”</p>
+      </div>
+    </div>
+
+    <div class="dot" id="testimonial-dots">
+      <div class="dot-btn active" data-index="0"></div>
+      <div class="dot-btn" data-index="1"></div>
+    </div>
+  </div>
+</container-5>
+
+
+<div class="FAQ">
+    <p>FAQs</p>
+    <h1>Commonly Asked Questions</h1>
+</div>
+
+<container-6>
+    <div class="Questions">
+        <div>
+            <div class="Questions-answer">
+                <h3>Q1. What is a Student Management System?
+                    <span><i class="bx bx-chevron-down"></i></span>
+                </h3>
+                <p>A Student Management System is a platform that helps schools manage student data, classes, attendance, and communication efficiently.</p>
+            </div>
+
+            <div class="Questions-answer-2">
+                <h3>Q2. Can parents access the portal?
+                    <span><i class="bx bx-chevron-right"></i></span>
+                </h3>
+            </div>
+
+            <div class="Questions-answer-2">
+                <h3>Q3. Is the platform secure?
+                    <span><i class="bx bx-chevron-right"></i></span>
+                </h3>
+            </div>
+
+            <div class="Questions-answer-2">
+                <h3>Q4. Do you offer a free trial?
+                    <span><i class="bx bx-chevron-right"></i></span>
+                </h3>
+            </div>
+        </div>
+        <div class="Questions-img">
+            <img src="https://i.ibb.co/02tQZng/Group-352.png" alt="FAQ Illustration">
+        </div>
+    </div>
+</container-6>
+
+<container-7>
+    <div class="Subscribe-border">
+        <div class="Subscribe">
+            <div class="rokat-img">
+                <img src="https://i.ibb.co/ScLJmJk/Group-360.png" alt="Rocket">
+            </div>
+            <p>Stay Updated</p>
+            <h1>Subscribe to Our Newsletter</h1>
+            <p>Get the latest insights and features delivered straight to your inbox.</p>
+            <div>
+                <input type="email" class="email-2" placeholder="Email">
+                <a href="#">Subscribe Now</a>
+            </div>
+            <div class="rokat-dot">
+                <img src="https://i.ibb.co/yg33D6b/Group-358.png" alt="Decorative Dot">
+            </div>
+        </div>
+    </div>
+</container-7>
+
+<footer class="footer">
+    <div class="footer-box">
+        <div class="row">
+            <div class="footer-col">
+                <img src="https://i.ibb.co/cThMKNB/Group-361.png" alt="Footer Logo">
+                <p>StudentSync helps institutions manage and streamline all student-related operations in one powerful platform.</p>
+                <div class="social-link">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>StudentSync</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Institutions</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Teacher DashBoard</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Solutions</h3>
+                <ul>
+                    <li><a href="#">For Schools</a></li>
+                    <li><a href="#">For Colleges</a></li>
+                    <li><a href="#">For Universities</a></li>
+                    <li><a href="#">Remote Learning</a></li>
+                    <li><a href="#">Exam Management</a></li>
+                    <li><a href="#">Fee Tracking</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  const testimonials = document.querySelectorAll(".client-box");
+  const dots = document.querySelectorAll(".dot-btn");
+  let current = 0;
+  let interval = null;
+
+  function showTestimonial(index) {
+    testimonials.forEach((box, i) => {
+      box.classList.remove("active");
+      dots[i].classList.remove("active");
+    });
+
+    testimonials[index].classList.add("active");
+    dots[index].classList.add("active");
+    current = index;
+  }
+
+  function nextTestimonial() {
+    const nextIndex = (current + 1) % testimonials.length;
+    showTestimonial(nextIndex);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = parseInt(dot.getAttribute("data-index"));
+      showTestimonial(index);
+      resetInterval();
+    });
+  });
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextTestimonial, 5000); // 5 seconds
+  }
+
+  // Initialize
+  showTestimonial(current);
+  interval = setInterval(nextTestimonial, 5000);
+  
+  document.addEventListener("DOMContentLoaded", () => {
+	    const featureSection = document.querySelector('.our-top-features');
+	    const featureCards = document.querySelectorAll('.Features-card > div');
+
+	    const observer = new IntersectionObserver((entries) => {
+	      entries.forEach(entry => {
+	        if(entry.isIntersecting) {
+	          featureSection.classList.add('active');
+
+	          featureCards.forEach((card, index) => {
+	            setTimeout(() => card.classList.add('active'), index * 150);
+	          });
+
+	          observer.unobserve(entry.target);
+	        }
+	      });
+	    }, { threshold: 0.3 });
+
+	    observer.observe(featureSection);
+	  });
+  
+  
+</script>
+
+</body>
+</html>

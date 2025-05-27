@@ -55,11 +55,19 @@ public class StudentController {
 		}
 	}
 
-	// Show index page (for HTML view)
 	@GetMapping("/index")
-	public String showIndex() {
-		return "index"; // Ensure you have index.html in src/main/resources/templates/ with Thymeleaf
-						// configured
+	public String index() {
+		return "index"; // This refers to index.html in templates
+	}
+
+	@GetMapping("/homepage")
+	public String homepage() {
+		return "homepage"; // This refers to homepage.html in templates
+	}
+
+	@GetMapping("/mainPage")
+	public String mainPage() {
+		return "mainPage"; // This refers to mainpage.html in templates
 	}
 
 	// Delete student by ID
