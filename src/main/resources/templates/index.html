@@ -4,43 +4,135 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Student Management</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 2rem;
-  }
-  h1 {
-    color: #333;
-  }
-  form {
-    margin-bottom: 1.5rem;
-  }
-  input, select {
-    padding: 6px;
-    margin: 4px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  th, td {
-    border: 1px solid #999;
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background: #eee;
-  }
-  button {
-    cursor: pointer;
-    padding: 6px 12px;
-  }
-  .message {
-    margin: 1rem 0;
-    font-weight: bold;
-  }
-</style>
+ <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #d1e9ff, #f0faff);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #0077cc;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 700px;
+      width: 100%;
+      animation: fadeIn 1s ease-in;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 45%;
+      min-width: 200px;
+    }
+
+    input, select {
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 0.3rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #0077cc;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+
+    #cancelEdit {
+      background-color: #999;
+    }
+
+    .message {
+      margin: 1rem 0;
+      padding: 0.7rem 1rem;
+      background-color: #e0ffe0;
+      border: 1px solid #88cc88;
+      color: #336633;
+      border-radius: 5px;
+      display: none;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      max-width: 900px;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    th, td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    th {
+      background-color: #0077cc;
+      color: #fff;
+    }
+
+    td:last-child button {
+      margin: 0 0.3rem;
+      padding: 0.4rem 0.8rem;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 768px) {
+      form, table {
+        width: 100%;
+        overflow-x: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <h1>Student Management System</h1>
@@ -80,7 +172,7 @@
     <tbody id="studentsTableBody"></tbody>
   </table>
 
-<script >
+<script>
   const baseURL = '/studentsManagementSystem/students';
   const form = document.getElementById('studentForm');
   const messageDiv = document.getElementById('message');
@@ -121,6 +213,18 @@
     setTimeout(() => { messageDiv.textContent = ''; }, 4000);
   }
 
+  // Automatically calculate age from date of birth
+  document.getElementById('dob').addEventListener('input', function () {
+    const dob = new Date(this.value);
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const m = today.getMonth() - dob.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+    document.getElementById('age').value = age >= 0 ? age : '';
+  });
+
   // Add or update student
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -135,14 +239,12 @@
     try {
       let res;
       if (id) {
-        // Update existing
         res = await fetch(`${baseURL}/${id}`, {
           method: 'PUT',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(studentData)
         });
       } else {
-        // Create new
         res = await fetch(baseURL, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
@@ -165,7 +267,7 @@
     }
   });
 
-  // Edit student (fill form with student data)
+  // Edit student
   async function editStudent(id) {
     try {
       const res = await fetch(`${baseURL}/${id}`);
@@ -208,5 +310,6 @@
   // Initial load
   loadStudents();
 </script>
+
 </body>
 </html>
